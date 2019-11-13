@@ -17,15 +17,6 @@
 
   <body>
 
-  <@ newPagelist { 
-    type: 'children',
-    excludeHidden: false 
-  } @>
-
-  <@ with '/' @>
-    <@ navigation @>
-  <@ end @>
-
   <nav class="navbar navbar-default navbar-fixed-top">
         <@ newPagelist { } @>
 		    <@ foreach in pagelist @>
