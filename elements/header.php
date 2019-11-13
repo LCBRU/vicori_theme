@@ -26,7 +26,7 @@
     <@ navigation @>
   <@ end @>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-default navbar-fixed-top">
         <@ newPagelist { } @>
 		    <@ foreach in pagelist @>
   			  <a class="nav-link <@ if @{ :current } @>active<@ end @>" title="@{ title }" href="@{ url }">@{ title }</a>

@@ -8,10 +8,10 @@
 				<h2>@{ subtitle }</h2>
 			</div>
 			<div class="col-md-6">
-				@{ text }
+				@{ text | markdown }
 			</div>
 			<div class="col-md-6">
-				@{text_2}
+				@{text_2 | markdown }
 			</div>
 		</div>
 	</div>
