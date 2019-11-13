@@ -15,7 +15,7 @@
     <title>@{ sitename } / @{ title | def('404') }</title>
   </head>
 
-  <body class="container">
+  <body>
 
 
   <@ snippet navigation @>
