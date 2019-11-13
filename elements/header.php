@@ -17,21 +17,6 @@
 
   <body>
 
-
-  <@ snippet navigation @>
-
-    <ul class="menu-list">
-      <@ foreach in pagelist @>
-        <li>
-          <a href="@{ url }"
-            <@ if @{ :current } @>class="has-background-info has-text-white"<@ end @>
-          >@{ title }</a>
-                  <@ navigation @>
-        </li>
-      <@ end @>
-    </ul>
-  <@ end @>
-
   <@ newPagelist { 
     type: 'children',
     excludeHidden: false 
@@ -48,4 +33,4 @@
 	  		<@ end @>
     </nav>
 
-    <div>
+    <div class="container">
