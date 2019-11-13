@@ -17,11 +17,26 @@
 
   <body>
 
-  <nav class="navbar navbar-default navbar-fixed-top">
-        <@ newPagelist { } @>
-		    <@ foreach in pagelist @>
-  			  <a class="nav-link <@ if @{ :current } @>active<@ end @>" title="@{ title }" href="@{ url }">@{ title }</a>
-	  		<@ end @>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">
+            <img src="/pages/vicori_logo_150.png" />
+          </a>
+        </div>
+
+        <@ newPagelist { 
+
+        } @>
+        <@ foreach in pagelist @>
+          <a class="nav-link <@ if @{ :current } @>active<@ end @>" title="@{ title }" href="@{ url }">@{ title }</a>
+        <@ end @>
+      </div>
     </nav>
 
     <div class="container">
