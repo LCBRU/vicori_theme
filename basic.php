@@ -1,5 +1,5 @@
 <?php defined('AUTOMAD') or die('Direct access not permitted!'); ?>
-<@ elements/header.php @>
+<@ snippets/header.php @>
 
 	<div class="container">
 		<div class="row">
@@ -16,4 +16,4 @@
 		</div>
 	</div>
 
-<@ elements/footer.php @>
+<@ snippets/footer.php @>
