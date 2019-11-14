@@ -17,7 +17,7 @@
 
   <body>
 
-    <nav class="navbar navbar-expand-med navbar-light bg-light">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
       <a class="navbar-brand" href="/">
         <img src="/pages/vicori_logo_150.png" />
       </a>
