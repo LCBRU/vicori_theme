@@ -25,7 +25,7 @@
           </a>
         </div>
 
-        <div class="level-1">
+        <div class="navbar-body">
           <ul class="nav navbar-nav">
             <@ newPagelist {
               type: 'children', 

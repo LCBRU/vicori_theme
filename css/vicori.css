@@ -160,6 +160,9 @@ hr {
     padding: 0;
   }
 }
+.navbar-header, .navbar-body {
+  display: table-cell;
+}
 .navbar .level-1 {
   background-color: #C11B7E;
 }
