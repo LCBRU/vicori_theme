@@ -25,7 +25,7 @@
             <img src="/pages/vicori_logo_150.png" />
           </a>
         </div>
-        <div id="navbar" class="navbar-collapse">
+        <div id="navbar" class="nav nav-pills">
           <ul class="nav navbar-nav">
             <@ newPagelist {
               type: 'children', 
