@@ -27,8 +27,6 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <@ newPagelist {
-            type: 'children', 
-            parent: '/' 
           } @>
           <@ foreach in pagelist @>
             <a class="nav-item nav-link <@ if @{ :current } @>active<@ end @>" title="@{ title }" href="@{ url }">@{ title }</a>
