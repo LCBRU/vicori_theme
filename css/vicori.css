@@ -153,7 +153,7 @@ hr {
   height: 180px;
   border-bottom: 2px solid #F499C2;
   background-color: #EEE;
-  background: linear-gradient(#CCC, #EEE);
+  background: linear-gradient(#C11B7E 50%, #EEE 50%);
 }
 @media (min-width: 768px) {
   .navbar .container {
@@ -161,7 +161,6 @@ hr {
   }
 }
 .navbar .level-1 {
-  //background-color: #383838;
   background-color: #C11B7E;
 }
 .navbar .level-1 .navbar-brand,
