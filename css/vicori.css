@@ -4,5 +4,8 @@
 
 nav {
     background: linear-gradient(to bottom, #C11B7E 58%, #EDEDED 42%);
+}
+
+nav * {
     vertical-align: top;
 }
