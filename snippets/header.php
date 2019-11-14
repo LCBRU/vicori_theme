@@ -18,21 +18,23 @@
   <body>
 
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-      <a class="navbar-brand" href="/">
-        <img src="/pages/vicori_logo_150.png" />
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <@ newPagelist {
-            context: '/',
-            type: 'children',
-          } @>
-          <@ foreach in pagelist @>
-            <a class="nav-item nav-link <@ if @{ :current } @>active<@ end @>" title="@{ title }" href="@{ url }">@{ title }</a>
-          <@ end @>
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/pages/vicori_logo_150.png" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <@ newPagelist {
+              context: '/',
+              type: 'children',
+            } @>
+            <@ foreach in pagelist @>
+              <a class="nav-item nav-link <@ if @{ :current } @>active<@ end @>" title="@{ title }" href="@{ url }">@{ title }</a>
+            <@ end @>
+          </div>
         </div>
       </div>
     </nav>
