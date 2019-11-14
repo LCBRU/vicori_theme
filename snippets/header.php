@@ -26,7 +26,7 @@
         </div>
 
         <div class="navbar-body">
-          <ul class="nav navbar-nav">
+          <ul class="">
             <@ newPagelist {
               type: 'children', 
               parent: '/' 
