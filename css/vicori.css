@@ -161,7 +161,7 @@ hr {
   }
 }
 .navbar-header, .navbar-body {
-  display: table-cell;
+  display: inline-block;
 }
 .navbar .level-1 {
   background-color: #C11B7E;
