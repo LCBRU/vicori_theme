@@ -37,4 +37,4 @@
       </div>
     </nav>
 
-    <div class="container">
+    <div id="main_container" class="container">
