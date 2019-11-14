@@ -26,6 +26,15 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
+
+        <@ newPagelist {
+          type: 'children', 
+          parent: '/' 
+        } @>
+        <@ foreach in pagelist @>
+          <a class="nav-item nav-link <@ if @{ :current } @>active<@ end @>" title="@{ title }" href="@{ url }">@{ title }</a>
+        <@ end @>
+        
           <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link" href="#">Features</a>
           <a class="nav-item nav-link" href="#">Pricing</a>
