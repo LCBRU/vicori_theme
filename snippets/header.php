@@ -25,18 +25,18 @@
             <img src="/pages/vicori_logo_150.png" />
           </a>
         </div>
-        <ul class="nav navbar-nav">
-          <@ newPagelist {
-            type: 'children', 
-            parent: '/' 
-          } @>
-          <@ foreach in pagelist @>
-            <li>
-              <a class="nav-link <@ if @{ :current } @>active<@ end @>" title="@{ title }" href="@{ url }">@{ title }</a>
-            </li>
-          <@ end @>
-        </li>
       </div>
     </nav>
+    <ul class="nav navbar-nav">
+        <@ newPagelist {
+          type: 'children', 
+          parent: '/' 
+        } @>
+        <@ foreach in pagelist @>
+          <li>
+            <a class="nav-link <@ if @{ :current } @>active<@ end @>" title="@{ title }" href="@{ url }">@{ title }</a>
+          </li>
+        <@ end @>
+      </li>
 
     <div class="container">
