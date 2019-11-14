@@ -17,6 +17,6 @@
 
   <body>
 
-    <@ snippets/nav.php @>
+    <@ nav.php @>
 
     <div class="container">
