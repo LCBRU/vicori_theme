@@ -25,15 +25,17 @@
           </a>
         </div>
 
-        <div class="nav-items">
+        <ul class="nav navbar-nav">
           <@ newPagelist {
             type: 'children', 
             parent: '/' 
           } @>
           <@ foreach in pagelist @>
-            <a class="nav-link <@ if @{ :current } @>active<@ end @>" title="@{ title }" href="@{ url }">@{ title }</a>
+            <li>
+              <a class="nav-link <@ if @{ :current } @>active<@ end @>" title="@{ title }" href="@{ url }">@{ title }</a>
+            </li>
           <@ end @>
-        </div>
+        </li>
       </div>
     </nav>
 
