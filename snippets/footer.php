@@ -2,8 +2,7 @@
 
 	</div>
 
-	<div class="container">
-		
+	<div class="container" class="fixed-bottom">
 		<div class="row">
 			<div class="col-md-3"><span class="glyphicon glyphicon-copyright-mark"></span> @{ :now | dateFormat('Y') } by <a href="/">@{ sitename }</a></div>
 			<div class="col-md-3"><span class="glyphicon glyphicon-envelope"></span> @{ email }</div>

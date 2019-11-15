@@ -15,28 +15,58 @@
     <title>@{ sitename } / @{ title | def('404') }</title>
   </head>
 
-  <body>
+<body>
 
-    <nav class="navbar navbar-expand-md fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="/">
-          <img src="/pages/vicori_logo_150.png" />
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <@ newPagelist {
-              context: '/',
-              type: 'children',
-            } @>
-            <@ foreach in pagelist @>
-              <a class="nav-item nav-link <@ if @{ :current } @>active<@ end @>" title="@{ title }" href="@{ url }">@{ title }</a>
-            <@ end @>
+  <div id="page_header" class="fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="/pages/vicori_logo_150.png" />
+      </a>
+      <nav id="first_nav" class="navbar navbar-expand-md">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbarNavDropdown" class="navbar-collapse collapse">
+              <ul class="navbar-nav mr-auto">
+                <@ newPagelist {
+                  context: '/',
+                  type: 'children',
+                } @>
+                <@ foreach in pagelist @>
+                  <@ if @{ :current } @>
+                      <@ set { %top_level: @{ url } } @>
+                  <@ end @>
+                  <li class="nav-item <@ if @{ :currentPath } @>active<@ end @>">
+                    <a class="nav-link" title="@{ title }" href="@{ url }">@{ title }</a>
+                  </li>
+                <@ end @>
+              </ul>
           </div>
-        </div>
-      </div>
-    </nav>
+      </nav>
+      <nav id="second_nav" class="navbar navbar-expand-md">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbarNavDropdown" class="navbar-collapse collapse">
+              <ul class="navbar-nav mr-auto">
+                <@ newPagelist {
+                  context: @{ %top_level },
+                  type: 'children',
+                } @>
+                <@ foreach in pagelist @>
+                  <li class="nav-item <@ if @{ :current } @>active<@ end @>">
+                    <a class="nav-link" title="@{ title }" href="@{ url }">@{ title }</a>
+                  </li>
+                <@ end @>
+              </ul>
+          </div>
+          <div class="navbar-nav">
+            <form class="form-inline" method="get" action="@{ urlSearchResults }" onsubmit="return (this.search.value.length > 0)">
+              <input class="form-control" type="text" name="search" placeholder="Search" value="" autocomplete="off" />
+            </form>
+          </div>
+      </nav>
+    </div>
+  </div>
 
-    <div id="main_container" class="container">
+  <div id="main_container" class="container">

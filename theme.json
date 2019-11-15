@@ -1,0 +1,12 @@
+{
+	"name": "vicori",
+	"description": "Theme for Vicori Study",
+	"author": "Richard Bramley",
+	"version": "1.0.0",
+	"license": "MIT",
+	"tooltips": {
+		"title": "Page title",
+		"introduction": "Page instroduction",
+		"main_text": "The text's main text",
+	}
+}
