@@ -31,14 +31,16 @@
                 <@ newPagelist {
                   context: '/',
                   type: 'children',
+                  excludeHidden: true,
                 } @>
+                <@ set { %top_level: 'nothing' } @>
                 <@ foreach in pagelist @>
-                  <@ if @{ :current } @>
-                      <@ set { %top_level: @{ url } } @>
+                  <@ if @{ :currentPath } @>
+                    <@ set { %top_level: @{ url } } @>
                   <@ end @>
-                  <li class="nav-item <@ if @{ :currentPath } @>active<@ end @>">
-                    <a class="nav-link" title="@{ title }" href="@{ url }">@{ title }</a>
-                  </li>
+                    <li class="nav-item <@ if @{ :currentPath } @>active<@ end @>">
+                      <a class="nav-link" title="@{ title }" href="@{ url }">@{ title }</a>
+                    </li>
                 <@ end @>
               </ul>
           </div>
